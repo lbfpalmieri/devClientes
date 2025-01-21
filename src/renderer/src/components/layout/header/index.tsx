@@ -10,7 +10,7 @@ export function Header({ isSidebarOpen }: HeaderProps){
     const isMacOS = process.platform === 'darwin';
     
     return(
-        <div id='header' className={clsx('flex items-center gab-4 leading-tight relative border-b border-slate-600 transition-all duration-200 py-[1.125rem] px-6',
+        <div id='header' className={clsx('flex items-center gab-4 leading-tight relative border-b border-slate-600 transition-all duration-200 py-[1.125rem] px-6 region-drag',
             {
                 'pl-24': !isSidebarOpen && isMacOS,
                 'w-screen': isSidebarOpen,
