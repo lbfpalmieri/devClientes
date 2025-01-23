@@ -1,28 +1,26 @@
-export function Create()
-{
+export function Create(){
 
-    async function handleAddCustomer(){
+  async function handleAddCustomer(){
 
-        const doc = {
-            name: 'Creiso Teste',
-            email: 'teste@teste.com',
-            phone: '123456789',
-            address: 'Rua teste, 123',
-            role: 'admin',
-            status: true,
-        }
-
-        const response = await window.api.addCustomer(doc)
-        console.log(response)
+    const doc = {
+      name: "Lucas Silva",
+      email: "lucas@teste.com",
+      phone: "67999999",
+      address: "Rua X, centro",
+      role: "Frontend",
+      status: true,
     }
 
-    return (
-        <div>
-            <h1>Criar clientes</h1>
+    const response = await window.api.addCustomer(doc)
+    console.log(response);
+    
+  }
 
-            <button onClick={handleAddCustomer}>Adicionar cliente
+  return (
+    <div>
+      <h1>Página Novo cliente!!!</h1>
 
-            </button>
-        </div>
-    );
+      <button onClick={handleAddCustomer}>CADASTRAR</button>
+    </div>
+  )
 }

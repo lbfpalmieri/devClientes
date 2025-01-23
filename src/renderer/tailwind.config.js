@@ -4,40 +4,44 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
-    './src/**/*.tsx',	
+    "./src/**/*.tsx"
   ],
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Poppins', 'sans-serif'],
-    },
-    keyframes: {
-      slideIn:{
-        from: { width: 0},
-        to: { width: 'var(--radix-collapsible-content-width)'}
+        sans: "Poppins, sans-serif"
       },
-      slideOut:{
-        from: { width: 'var(--radix-collapsible-content-width)'},
-        to: { width: 0}
+
+      keyframes:{
+        slideIn:{
+          from: { width: 0 },
+          to: { width: 'var(--radix-collapsible-content-width)' }
+        },
+        slideOut:{
+          from: { width: 'var(--radix-collapsible-content-width)' },
+          to: { width: 0 }
+        }
+      },
+
+      animation:{
+        slideIn: 'slideIn 0.28s',
+        slideOut: 'slideOut 0.28s',
       }
+
     },
-    animation: {
-      slideIn: 'slideIn 0.3s ease-in-out',
-      slideOut: 'slideOut 0.3s ease-in-out'
-    }
   },
   plugins: [
     plugin(({ addUtilities }) => {
       addUtilities({
-        '.region-drag':{
-          '.webkit-app-region': 'drag'
+        '.region-drag': {
+          '-webkit-app-region': 'drag'
         },
         '.region-no-drag':{
-          '.webkit-app-region': 'no-drag'
+          '-webkit-app-region': 'no-drag'
         }
       })
     })
+
   ],
-}
 }
 

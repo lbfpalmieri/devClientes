@@ -1,8 +1,7 @@
-export function About()
-{
-    return (
-        <div>
-            <h1>Sobre o projeto</h1>
-        </div>
-    );
+export function About(){
+  return (
+    <div>
+      <h1>Página Sobre o projeto!!!</h1>
+    </div>
+  )
 }
